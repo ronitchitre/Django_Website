@@ -1,0 +1,8 @@
+{% extends 'my_app/base.html' %}
+{% block content %}
+<div class="container">
+    <h1 class="display-3 align-items-center text-center mb-3">About</h1>
+</div>
+{% load static %}
+<img src = "{% static 'my_app/Mando Poster.png' %}" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+{% endblock content %}
