@@ -4,7 +4,7 @@ from django.urls import reverse
 # from django.views.generic.detail import t
 from .models import Course, CourseSelected
 from django.contrib.auth.decorators import login_required
-from django.views.generic import ListView,CreateView,UpdateView,DeleteView
+from django.views.generic import ListView,CreateView,UpdateView,DeleteView, DetailView
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.utils.decorators import method_decorator
 
@@ -64,3 +64,9 @@ class CourseDeleteView(UserPassesTestMixin,DeleteView):
             return True
         else:
             return False
+
+@method_decorator(login_required, name='dispatch')
+class CourseDetailView(DetailView):
+    model = CourseSelected
+    template_name = "my_app/detail.html"
+    context_object_name = 'data'

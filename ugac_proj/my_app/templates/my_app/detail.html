@@ -1,0 +1,22 @@
+{% extends 'my_app/base.html' %}
+{% block content %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Student</th>
+        <th scope="col">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{data.student.username}}</th>
+        <td>{{data.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="btn btn-outline-info" href = "/">
+    Back to home page
+</a>
+</div>
+
+{% endblock content %}

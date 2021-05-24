@@ -38,6 +38,7 @@
           <th scope="col">Name</th>
           <th scope="col">Update</th>
           <th scope = "col">Delete</th>
+          <th scope = "col">Details</th>
         </tr>
       </thead>
       <tbody>
@@ -52,6 +53,7 @@
           <td></td>
           <td></td>
           {% endifequal %}
+          <td><a href = "course/{{data.id}}/detail/">Details</a></td>
         </tr>
         {% endfor %}
       </tbody>
