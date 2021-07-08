@@ -10,6 +10,7 @@ class Course(models.Model):
     prereq = models.CharField(max_length=50)
     dep = models.CharField(max_length=50)
     available = models.BooleanField()
+    slug = models.SlugField(max_length = 250, null = True, blank = True)
 
     def __str__(self):
         return self.name
